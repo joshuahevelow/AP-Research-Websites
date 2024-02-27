@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Buy - TVs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Best Buy</h1>
+  
+
+    <nav>
+      <!-- Navigation bar with waffle icon and shopping cart button -->
+      <ul class="navbar-items">
+        <li class="navbar-item"><a href="index.html">Deals</a></li>
+        <li class="navbar-item" id="products-link"><a href="#">Products</a>
+          <ul class="sub-items">
+            <li><a href="tvs.html">TVs</a></li>
+            <li><a href="computers.html">Computers</a></li>
+            <li><a href="phones.html">Phones</a></li>
+            <!-- Add more sub-items as needed -->
+          </ul>
+        </li>
+        <li class="navbar-item"><a href="about.html">About</a></li>
+        <!-- Add more navbar items as needed -->
+      </ul>
+      <!-- Waffle icon -->
+      <div id="waffle-icon" onclick="toggleNavbarItems()">☰</div>
+      <div id="cart-icon" onclick="goToCart()">🛒</div>
+    </nav>
+  </header>
+
+  <!-- Content specific to the Deals page -->
+  <!-- ... (Same as before) -->
+
+  <div class="subheading">
+    <h2>Shop for TVs</h2>
+  </div>
+
+  <!-- Additional cards with "Add to Cart" button -->
+  <div class="card">
+    <h2>Toshiba - 55 inch Class C350</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6532/6532120_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>Toshiba’s C350 series sets up a stunning, heart-shaking, smart world for your relaxing viewing experience, thanks to the consistent innovation of advanced technologies. True-to-life images jump off the screen with amazing 4K Ultra HD resolution, ultimately beauty of details, and original natural color. For a more immersive audio experience, a premium audio post-processing solution brings height to the entertainment experience that elevates surround sound formatting from DTS Virtual.</p>
+    <p class="price">$280</p>
+    <button class="add-to-cart-button" onclick="addToCart('Toshiba - 55 inch Class C350')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Sony - 65 inch Class X80K</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6499/6499677_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>Enjoy a smart Google TV experience equipped with the picture processing power to make everything you watch feel so real. Advanced image processing from the 4K HDR Processor X1 and TRILUMINOS PRO gives details and color a boost for picture that feels natural and immersive. </p>
+    <p class="price">$700</p>
+    <button class="add-to-cart-button" onclick="addToCart('Sony - 65 inch Class X80K')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Roku - 43 inch Class Select Series</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6536/6536712_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>Roku Select Series 4K TVs are thoughtfully designed to upgrade your entertainment at an incredible value. Enjoy your streaming favorites in brilliant 4K HDR picture that’s optimized for your room lighting with automatic brightness. Catch every word with built-in sound features like auto speech clarity and night mode or enjoy private listening with headphones. Switch to your inputs and watch free live TV right from the home screen, or use the voice remote to find movies, shows, or songs across thousands of channels. And even your deepest couch cushions are no match for the lost remote finder. A smart TV made by Roku? Now that makes sense.  </p>
+    <p class="price">$230</p>
+    <button class="add-to-cart-button" onclick="addToCart('Roku - 43 inch Class Select Series')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Samsung - 65 inch Class CU7000</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6537/6537363_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>True-to-life color. Effortless connectivity. Dazzling 4K value. Samsung Crystal UHD is worth a look (and more). Effortlessly access TV shows, movies and ambient content using the Samsung Smart Hub, or find a range of great games on the Samsung Gaming Hub.* Enjoy content even more clear than it was created as its upgraded to 4K resolution </p>
+    <p class="price">$400</p>
+    <button class="add-to-cart-button" onclick="addToCart('Samsung - 65 inch Class CU7000')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Insignia™ - 65 inch Class F30</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6492/6492966_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>Take in every moment with breathtaking 4K Ultra HD on this 65-inch screen. It’s equipped with DTS Studio Sound to create realistic and immersive audio. Access live over-the-air channels and streaming—and control it all with your voice. Ask Alexa to launch apps, search for titles and more. Experience the affordable, yet high-performing Insignia NS-65F301NA23 65" Class F30 Series LED 4K UHD Smart Fire TV. </p>
+    <p class="price">$350</p>
+    <button class="add-to-cart-button" onclick="addToCart('Insignia™ - 65 inch Class F30')">Add to Cart</button>
+  </div>
+
+  <!-- ... (Additional cards) -->
+
+  <script>
+    function toggleNavbarItems() {
+      const navbarItems = document.querySelector('.navbar-items');
+      navbarItems.classList.toggle('show');
+    }
+
+    const productsLink = document.getElementById('products-link');
+    const subItems = productsLink.querySelector('.sub-items');
+
+    productsLink.addEventListener('click', function() {
+      subItems.classList.toggle('show');
+    });
+
+    function addToCart(itemName) {
+      // Get existing cart items from sessionStorage or create an empty array
+      const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+      // Add the current item to the cart
+      cartItems.push(itemName);
+
+      // Save the updated cart back to sessionStorage
+      sessionStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+
+    function goToCart() {
+      // Redirect to the Cart page
+      window.location.href = 'cart.html';
+    }
+  </script>
+</body>
+</html>

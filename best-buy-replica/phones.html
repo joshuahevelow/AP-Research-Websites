@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Buy - Phones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Best Buy</h1>
+  
+
+    <nav>
+      <!-- Navigation bar with waffle icon and shopping cart button -->
+      <ul class="navbar-items">
+        <li class="navbar-item"><a href="index.html">Deals</a></li>
+        <li class="navbar-item" id="products-link"><a href="#">Products</a>
+          <ul class="sub-items">
+            <li><a href="tvs.html">TVs</a></li>
+            <li><a href="computers.html">Computers</a></li>
+            <li><a href="phones.html">Phones</a></li>
+            <!-- Add more sub-items as needed -->
+          </ul>
+        </li>
+        <li class="navbar-item"><a href="about.html">About</a></li>
+        <!-- Add more navbar items as needed -->
+      </ul>
+      <!-- Waffle icon -->
+      <div id="waffle-icon" onclick="toggleNavbarItems()">☰</div>
+      <div id="cart-icon" onclick="goToCart()">🛒</div>
+    </nav>
+  </header>
+
+  <!-- Content specific to the Deals page -->
+  <!-- ... (Same as before) -->
+
+  <div class="subheading">
+    <h2>Shop for Phones</h2>
+  </div>
+
+  <!-- Additional cards with "Add to Cart" button -->
+  <div class="card">
+    <h2>Apple iPhone 15</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418013_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>iPhone 15 brings you Dynamic Island, a 48MP Main camera, and USB-C—all in a durable color-infused glass and aluminum design. </p>
+    <p class="price">$1000</p>
+    <button class="add-to-cart-button" onclick="addToCart('Apple iPhone 15')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Samsung Galaxy S24</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6570/6570272_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>The new era of mobile AI is here. Make every day epic with Galaxy S24. See a delicious looking dish on your social feed but don’t see a recipe? Simply Circle to Search with Google to find it in seconds. Then head to a sunny farmer’s market to pick up the ingredients and see your list clearly on the bright, adaptive display of Galaxy S24. Once the meal is ready, capture stunning close ups of your dish and dinner guests, no matter the lighting, with a high res camera and Nightography. And all the while, you can stay plugged into the moment, not the outlet, with a long lasting battery. Do more easily with Galaxy S24. Galaxy AI is here. </p>
+    <p class="price">$1000</p>
+    <button class="add-to-cart-button" onclick="addToCart('Samsung Galaxy S24')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Apple iPhone 13</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6417/6417788_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>iPhone 13. The most advanced dual-camera system ever on iPhone. Lightning-fast A15 Bionic chip. A big leap in battery life. Durable design. Superfast 5G.¹ And a brighter Super Retina XDR display. </p>
+    <p class="price">$700</p>
+    <button class="add-to-cart-button" onclick="addToCart('Apple iPhone 13')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Google Pixel 8</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6559/6559236_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>Meet Pixel 8. The helpful phone engineered by Google, with an amazing camera, powerful security, and an all-day battery. [1] With Google AI, you can do more, even faster – like fix photos, screen calls, and get answers. [2] And Pixel 8 has personal safety features for added peace of mind. [3] </p>
+    <p class="price">$700</p>
+    <button class="add-to-cart-button" onclick="addToCart('Google Pixel 8')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Samsung Galaxy Z Flip5</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6548/6548830_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>Meet the phone that's tiny, trendy and totally flex worthy. With a full cover screen, you can reply to texts, preview photos and access even more widgets than before with your Galaxy Z Flip5 folded shut. And with Flex Mode, you can capture hands free selfies and videos from any angle. A compact, durable design makes this pocket sized phone perfect for life on the go. Plus, personalize your phone from the outside in with a customizable cover screen and four stylish covers to show off your style. Flex a phone as bold as you are with Galaxy Z Flip5. </p>
+    <p class="price">$800</p>
+    <button class="add-to-cart-button" onclick="addToCart('Samsung Galaxy Z Flip5')">Add to Cart</button>
+  </div>
+
+  <!-- ... (Additional cards) -->
+
+  <script>
+    function toggleNavbarItems() {
+      const navbarItems = document.querySelector('.navbar-items');
+      navbarItems.classList.toggle('show');
+    }
+
+    const productsLink = document.getElementById('products-link');
+    const subItems = productsLink.querySelector('.sub-items');
+
+    productsLink.addEventListener('click', function() {
+      subItems.classList.toggle('show');
+    });
+
+    function addToCart(itemName) {
+      // Get existing cart items from sessionStorage or create an empty array
+      const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+      // Add the current item to the cart
+      cartItems.push(itemName);
+
+      // Save the updated cart back to sessionStorage
+      sessionStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+
+    function goToCart() {
+      // Redirect to the Cart page
+      window.location.href = 'cart.html';
+    }
+  </script>
+</body>
+</html>

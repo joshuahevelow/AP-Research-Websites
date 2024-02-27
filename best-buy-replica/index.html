@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Buy - Deals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Best Buy</h1>
+  
+
+    <nav>
+      <!-- Navigation bar with waffle icon and shopping cart button -->
+      <ul class="navbar-items">
+        <li class="navbar-item"><a href="index.html">Deals</a></li>
+        <li class="navbar-item" id="products-link"><a href="#">Products</a>
+          <ul class="sub-items">
+            <li><a href="tvs.html">TVs</a></li>
+            <li><a href="computers.html">Computers</a></li>
+            <li><a href="phones.html">Phones</a></li>
+            <!-- Add more sub-items as needed -->
+          </ul>
+        </li>
+        <li class="navbar-item"><a href="about.html">About</a></li>
+        <!-- Add more navbar items as needed -->
+      </ul>
+      <!-- Waffle icon -->
+      <div id="waffle-icon" onclick="toggleNavbarItems()">☰</div>
+      <div id="cart-icon" onclick="goToCart()">🛒</div>
+    </nav>
+  </header>
+
+  <!-- Content specific to the Deals page -->
+  <!-- ... (Same as before) -->
+
+  <div class="subheading">
+    <h2>Check out the Latest Deals</h2>
+  </div>
+
+  <!-- Additional cards with "Add to Cart" button -->
+  <div class="card">
+    <h2>Apple iPhone 15</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418013_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>iPhone 15 brings you Dynamic Island, a 48MP Main camera, and USB-C—all in a durable color-infused glass and aluminum design. </p>
+    <p class="price">$1000</p>
+    <button class="add-to-cart-button" onclick="addToCart('Apple iPhone 15')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Toshiba - 55 inch Class C350</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6532/6532120_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>Toshiba’s C350 series sets up a stunning, heart-shaking, smart world for your relaxing viewing experience, thanks to the consistent innovation of advanced technologies. True-to-life images jump off the screen with amazing 4K Ultra HD resolution, ultimately beauty of details, and original natural color. For a more immersive audio experience, a premium audio post-processing solution brings height to the entertainment experience that elevates surround sound formatting from DTS Virtual.</p>
+    <p class="price">$280</p>
+    <button class="add-to-cart-button" onclick="addToCart('Toshiba - 55 inch Class C350')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Dell - Inspiron 16.0 inch 2-in-1 Touch Laptop</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6539/6539902_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>Embark on your adventure with the Inspiron 16 2-in-1 Laptop’s elevated audio in any mode, a larger-than-life screen and an upscale design.</p>
+    <p class="price">$800</p>
+    <button class="add-to-cart-button" onclick="addToCart('Dell - Inspiron 16.0 inch 2-in-1 Touch Laptop')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Samsung Galaxy S24</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6570/6570272_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>The new era of mobile AI is here. Make every day epic with Galaxy S24. See a delicious looking dish on your social feed but don’t see a recipe? Simply Circle to Search with Google to find it in seconds. Then head to a sunny farmer’s market to pick up the ingredients and see your list clearly on the bright, adaptive display of Galaxy S24. Once the meal is ready, capture stunning close ups of your dish and dinner guests, no matter the lighting, with a high res camera and Nightography. And all the while, you can stay plugged into the moment, not the outlet, with a long lasting battery. Do more easily with Galaxy S24. Galaxy AI is here. </p>
+    <p class="price">$1000</p>
+    <button class="add-to-cart-button" onclick="addToCart('Samsung Galaxy S24')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h2>Apple MacBook Air 15 inch Laptop</h2>
+    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6534/6534606_sd.jpg;maxHeight=640;maxWidth=550" alt="Placeholder Image">
+    <p>The 15-inch MacBook Air is impossibly thin and has a stunning Liquid Retina display. Supercharged by the M2 chip—and with up to 18 hours of battery life¹—it delivers incredible performance in an ultraportable design. </p>
+    <p class="price">$1000</p>
+    <button class="add-to-cart-button" onclick="addToCart('Apple MacBook Air 15 inch Laptop')">Add to Cart</button>
+  </div>
+
+  <!-- ... (Additional cards) -->
+
+  <script>
+    function toggleNavbarItems() {
+      const navbarItems = document.querySelector('.navbar-items');
+      navbarItems.classList.toggle('show');
+    }
+
+    const productsLink = document.getElementById('products-link');
+    const subItems = productsLink.querySelector('.sub-items');
+
+    productsLink.addEventListener('click', function() {
+      subItems.classList.toggle('show');
+    });
+
+    function addToCart(itemName) {
+      // Get existing cart items from sessionStorage or create an empty array
+      const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+      // Add the current item to the cart
+      cartItems.push(itemName);
+
+      // Save the updated cart back to sessionStorage
+      sessionStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+
+    function goToCart() {
+      // Redirect to the Cart page
+      window.location.href = 'cart.html';
+    }
+  </script>
+</body>
+</html>

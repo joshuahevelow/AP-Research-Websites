@@ -1,0 +1,159 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+header {
+  background-color: #0a4abf; /* Best Buy blue */
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Align title to the left and waffle icon to the right */
+  align-items: center; /* Vertically center the items */
+}
+
+#waffle-icon {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: transparent; /* Set background color to transparent */
+  margin-right: 10px; /* Add margin to align to the right */
+}
+
+.navbar-items {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically center the items */
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav li{
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+}
+
+nav a:hover{
+  color:#f6eb16;
+}
+
+.card {
+  border: 1px solid #f6eb16;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #003366;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 0; /* Align to the right */
+    width: 100%;
+    background-color: #004080; /* Best Buy medium blue */
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-items.show {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+}
+
+.about-content {
+  background-color: #fff; /* White background for content */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.about-content h2 {
+  color: 	#f6eb16 /* Yellow accent for heading */
+}
+
+.about-content h3 {
+  color: #003366; /* Best Buy blue for subheadings */
+}
+
+.about-content p {
+  color: #555; /* Dark gray for text */
+}
+
+.sub-items {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-items.show {
+  display: block;
+}
+
+.add-to-cart-button {
+  background-color: 	#f6eb16; /* Yellow background */
+  color: #003366; /* Best Buy blue text color */
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #003366; /* Best Buy blue on hover */
+  color: #fff; /* White text color on hover */
+}
+
+#shopping-cart {
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+#cart-icon {
+  cursor: pointer;
+  background-color: 	#f6eb16; /* Yellow background */
+  padding: 10px; /* Add padding for a better appearance */
+  border-radius: 50%; /* Make it a circle */
+}
+
+.subheading {
+  text-align: center;
+  background-color:	#f6eb16; /* Yellow background */
+  color: #003366;
+  padding: 10px; /* Add padding for better appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}

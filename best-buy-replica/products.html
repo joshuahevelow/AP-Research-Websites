@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website - Products</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Your Website</h1>
+
+  <nav>
+    <!-- Navigation bar with waffle icon -->
+    <div id="waffle-icon" onclick="toggleNavbarItems()">☰</div>
+    <ul class="navbar-items">
+      <li class="navbar-item"><a href="index.html">Home</a></li>
+      <li class="navbar-item" id="products-link"><a href="#">Products</a>
+        <ul class="sub-items">
+          <li><a href="#">Category 1</a></li>
+          <li><a href="#">Category 2</a></li>
+          <!-- Add more sub-items as needed -->
+        </ul>
+      </li>
+      <li class="navbar-item"><a href="about.html">About</a></li>
+      <!-- Add more navbar items as needed -->
+    </ul>
+  </nav>
+</header>
+
+  <!-- Content specific to the Products page -->
+  <div class="card">
+    <h2>Explore Our Products</h2>
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+    <p>This is the content of the products page.</p>
+  </div>
+
+  <!-- Your other content goes here -->
+
+  <script>
+    function toggleNavbarItems() {
+      const navbarItems = document.querySelector('.navbar-items');
+      navbarItems.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
