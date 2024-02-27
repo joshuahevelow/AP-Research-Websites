@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBC News - Help</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>NBC News</h1>
+  
+
+    <nav>
+      <!-- Navigation bar with waffle icon and shopping cart button -->
+      <ul class="navbar-items">
+        <li class="navbar-item"><a href="index.html">Trending</a></li>
+        <li class="navbar-item" id="products-link"><a href="#">Topics↓</a>
+          <ul class="sub-items">
+            <li><a href="politics.html">Politics</a></li>
+            <li><a href="business.html">Business</a></li>
+            <li><a href="health.html">Health</a></li>
+            <!-- Add more sub-items as needed -->
+          </ul>
+        </li>
+        <li class="navbar-item"><a href="help.html">Help</a></li>
+        <!-- Add more navbar items as needed -->
+      </ul>
+      <!-- Waffle icon -->
+      <div id="waffle-icon" onclick="toggleNavbarItems()">☰</div>
+    </nav>
+  </header>
+
+  <!-- Content specific to the About page -->
+  <div class="content about-content">
+    <h2>Help and FAQ</h2>
+    
+    <h3>How to use our website</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <h3>Contact Us</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  </div>
+
+  <!-- Your other content goes here -->
+
+  <script>
+    function toggleNavbarItems() {
+      const navbarItems = document.querySelector('.navbar-items');
+      navbarItems.classList.toggle('show');
+    }
+
+    const productsLink = document.getElementById('products-link');
+    const subItems = productsLink.querySelector('.sub-items');
+
+    productsLink.addEventListener('click', function() {
+      subItems.classList.toggle('show');
+    });
+
+    function goToCart() {
+      // Redirect to the Cart page
+      window.location.href = 'cart.html';
+    }
+  </script>
+</body>
+</html>
