@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Buy - Deals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Y!Sports</h1>
+  
+
+    <nav>
+      <!-- Navigation bar with waffle icon and shopping cart button -->
+      <ul class="navbar-items">
+        <li class="navbar-item"><a href="index.html">Upcoming</a></li>
+        <li class="navbar-item" id="products-link"><a href="#">Sports↓</a>
+          <ul class="sub-items">
+            <li><a href="football.html">Football</a></li>
+            <li><a href="basketball.html">Basketball</a></li>
+            <li><a href="baseball.html">Baseball</a></li>
+            <!-- Add more sub-items as needed -->
+          </ul>
+        </li>
+        <li class="navbar-item"><a href="about.html">About</a></li>
+        <!-- Add more navbar items as needed -->
+      </ul>
+      <!-- Waffle icon -->
+      <div id="waffle-icon" onclick="toggleNavbarItems()">☰</div>
+    </nav>
+  </header>
+
+  <!-- Content specific to the Deals page -->
+  <!-- ... (Same as before) -->
+
+  <div class="subheading">
+    <h2>Check out Upcoming Games</h2>
+  </div>
+
+  <!-- Additional cards with "Add to Cart" button -->
+  <div class="card">
+    <div class="match-info">
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/nba/20181217/70x70/76ers_wbg.png" alt="Team 1 Logo">
+        <p>76ers 33-24</p>
+      </div>
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/20231117/70x70/celtics_wbg.png" alt="Team 2 Logo">
+        <p>Celtics 45-12</p>
+      </div>
+      <div class="time">
+        <p>7:30 PM EST</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="match-info">
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/20231010/70x70/lightning_wbg.png" alt="Team 1 Logo">
+        <p>Lightning 32-23-5</p>
+      </div>
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/20230905/nhl/70x70/philadelphia-flyers_wbg.png" alt="Team 2 Logo">
+        <p>Flyers 30-22-7</p>
+      </div>
+      <div class="time">
+        <p>7:00 PM EST</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="match-info">
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/mlb/20190213/70x70/phillies_wbg.png" alt="Team 1 Logo">
+        <p>Phillies 2-1</p>
+      </div>
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/mlb/20230410/70x70/minnesota-twins_wbg.png" alt="Team 2 Logo">
+        <p>Twins 1-2</p>
+      </div>
+      <div class="time">
+        <p>1:05 PM EST</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="match-info">
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/nba/20181226/70x70/pelicans_wbg.png" alt="Team 1 Logo">
+        <p>Pelicans 34-24</p>
+      </div>
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/nba/20181226/70x70/knicks_wbg.png" alt="Team 2 Logo">
+        <p>Knicks 35-23</p>
+      </div>
+      <div class="time">
+        <p>7:30 PM EST</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="match-info">
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/nba/20181214/70x70/mavericks_wbg.png" alt="Team 1 Logo">
+        <p>Mavericks 33-24</p>
+      </div>
+      <div class="team">
+        <img src="https://s.yimg.com/cv/apiv2/default/nba/20220917/70x70/cavaliers_wbg.png" alt="Team 2 Logo">
+        <p>Cavaliers 37-19</p>
+      </div>
+      <div class="time">
+        <p>7:00 PM EST</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="match-info">
+      <div class="team">
+        <img src="https://s.yimg.com/iu/api/res/1.2/9FUxztAh_FUiH55pTv8F9A--~B/YXBwaWQ9c2hhcmVkO2ZpPWZpbGw7cT0xMDA7aD02MDt3PTYw/https://s.yimg.com/cv/apiv2/default/20181022/500x500/mariners_wbg.png" alt="Team 1 Logo">
+        <p>Mariners 1-2</p>
+      </div>
+      <div class="team">
+        <img src="https://s.yimg.com/iu/api/res/1.2/eqEBX2oPUVRECIOj0sTkuQ--~B/YXBwaWQ9c2hhcmVkO2ZpPWZpbGw7cT0xMDA7aD02MDt3PTYw/https://s.yimg.com/cv/apiv2/default/mlb/20190409/500x500/giants_s.png" alt="Team 2 Logo">
+        <p>Giants 0-2</p>
+      </div>
+      <div class="time">
+        <p>3:05 PM EST</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="match-info">
+      <div class="team">
+        <img src="https://s.yimg.com/iu/api/res/1.2/imCk0cEDxLY9.ttp1UYGyg--~B/YXBwaWQ9c2hhcmVkO2ZpPWZpbGw7cT0xMDA7aD02MDt3PTYw/https://s.yimg.com/cv/apiv2/default/nhl/20210311/500x500/buffalo-sabres_wbg.png" alt="Team 1 Logo">
+        <p>Sabres 27-27-4</p>
+      </div>
+      <div class="team">
+        <img src="https://s.yimg.com/iu/api/res/1.2/i0ur7VOEXh_cIGKCNB3SNg--~B/YXBwaWQ9c2hhcmVkO2ZpPWZpbGw7cT0xMDA7aD02MDt3PTYw/https://s.yimg.com/cv/apiv2/default/nhl/20210312/500x500/florida_wbg.png" alt="Team 2 Logo">
+        <p>Panthers 38-16-4</p>
+      </div>
+      <div class="time">
+        <p>7:00 PM EST</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ... (Additional cards) -->
+
+  <script>
+    function toggleNavbarItems() {
+      const navbarItems = document.querySelector('.navbar-items');
+      navbarItems.classList.toggle('show');
+    }
+
+    const productsLink = document.getElementById('products-link');
+    const subItems = productsLink.querySelector('.sub-items');
+
+    productsLink.addEventListener('click', function() {
+      subItems.classList.toggle('show');
+    });
+
+    function addToCart(itemName) {
+      // Get existing cart items from sessionStorage or create an empty array
+      const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+      // Add the current item to the cart
+      cartItems.push(itemName);
+
+      // Save the updated cart back to sessionStorage
+      sessionStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+
+    function goToCart() {
+      // Redirect to the Cart page
+      window.location.href = 'cart.html';
+    }
+  </script>
+</body>
+</html>
